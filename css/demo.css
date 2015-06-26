@@ -1,0 +1,123 @@
+@import url("reset.css");
+@import url("prettify.css");
+
+/* ------ layout
+-----------------------------------------------*/
+
+@font-face {
+    font-family: 'MelbourneRegular';
+    src: url('../font/melbourne_reg-webfont.eot');
+    src: url('../font/melbourne_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/melbourne_reg-webfont.woff') format('woff'),
+         url('../font/melbourne_reg-webfont.ttf') format('truetype'),
+         url('../font/melbourne_reg-webfont.svg#MelbourneRegular') format('svg');
+}
+
+html, body {
+margin:0;
+padding:0;
+}
+
+body {
+font-family:Arial, Verdana, Helvetica, sans-serif;
+font-size:13px;
+color:#191919;
+height:100%;
+width:100%;
+background:url(../images/wood.jpg) repeat fixed;
+}
+
+#content {
+padding:50px;
+}
+
+#content .wrapper-inside {
+padding:50px 0;
+width:100%;
+background:#fff;
+}
+
+#content .clear {
+clear:both;
+}
+
+#carbonads-container,
+.carbonad {
+float:left;
+clear:both;
+width:400px !important;
+}
+
+.carbonad {
+background:#fefefe !important;
+border:none !important;
+height:auto !important;
+margin-bottom:15px !important;
+padding-bottom:15px !important;
+border-bottom:none !important;
+position:relative !important; 
+}
+
+.carbonad-image {
+float:left !important;
+width:130px !important;
+}
+
+.carbonad-image img {
+margin:0 !important;
+}
+
+.carbonad-text {
+width:250px !important;
+padding-top:0 !important;
+float:left !important;
+}
+
+.carbonad-text a {
+color:#111 !important;
+}
+
+.carbonad-tag {
+margin-top:-10px !important;
+}
+
+
+/* ------ heading
+-----------------------------------------------*/
+
+header {
+	font-family: 'PT Sans', sans-serif;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(105, 78, 8, 0.15);
+}
+
+header h1 {
+	font-size: 40px;
+	margin-bottom: 0;
+	color: #8C8466;
+}
+
+header h2 {
+	color: #A8A38D;
+	margin-top: 5px;
+	font-size: 24px;
+}
+
+
+/* ------ links
+-----------------------------------------------*/
+a:link, a:visited {
+color:#111;
+text-decoration:none;
+}
+
+a:hover {
+text-decoration:none;
+}
+
+
+footer {
+	margin-top: 180px;
+	text-align: center;
+	font-size: 20px;
+}

@@ -1,0 +1,58 @@
+/* ------ mobilymap
+-----------------------------------------------*/
+
+
+.wrap {
+width:700px;
+margin:120px auto 0;
+}
+
+
+.nature {
+display:block;
+width:150px;
+height:150px;
+background:url(../images/pic1.png) no-repeat;
+cursor:pointer;
+position:relative;
+}
+
+.socials {
+display:block;
+width:32px;
+height:32px;
+background:url(../images/sns32/home.png) no-repeat;
+cursor:pointer;
+position:relative;
+}
+
+
+
+
+.socials, .nature {
+clear:both;
+margin:0 auto;
+z-index:2;
+}
+
+
+ul.reset,
+ul.reset li {
+display:block;
+list-style:none;
+padding:0;
+margin:0;
+}
+
+ul.reset li {
+position:absolute;
+}
+
+ul.reset li a {
+outline:none;
+}
+
+a img {
+border:none;
+}
+

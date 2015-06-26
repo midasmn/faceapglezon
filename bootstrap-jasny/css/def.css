@@ -1,0 +1,154 @@
+/* サイドメニュー用 */
+html, body {
+  height: 100%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+body {
+  padding: 50px 0 0 0;
+}
+
+.logo{
+  font-family: 'EB Garamond', serif;
+}
+/**/
+/* フッターを下部へ押しやるための、コンテンツのラッパー */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* フッターの高さ分だけ、ネガティブインデントを指定 */
+  margin: 0 auto -120px;
+  /* フッターの高さ分だけ、パディングを指定 */
+  padding: 0 0 120px;
+}
+
+
+/* サイドメニュー*/
+.navmenu {
+  padding-top: 50px;
+}
+.navbar {
+  display: block;
+  text-align: center;
+}
+.navbar-brand {
+  display: inline-block;
+  float: none;
+}
+.navbar-toggle {
+  position: absolute;
+  float: left;
+  margin-left: 15px;
+}
+.container {
+  max-width: 100%;
+}
+@media (min-width: 1px) {
+  .navbar-toggle {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    padding: 0 0 0 300px;
+  }
+  .navmenu {
+    padding-top: 0;
+  }
+  .navbar {
+    display: none !important; /* IE8 fix */
+  }
+}
+/* サイドメニュー用 */
+
+/* footer*/
+.footer {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+.footer a {
+  color: #777;
+}
+.footer .whiteband {
+  background: white;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+.footer .whiteband ul,
+.footer .whiteband li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .whiteband li {
+  display: inline-block;
+  white-space: nowrap;
+}
+.footer .whiteband a {
+  color: #777;
+}
+.footer .social-icon {
+  margin: 0px 5px;
+}
+
+
+/* footer*/
+
+/* SNSボタン*/
+.fa-facebook-square {
+color: #d1d4d3;
+}
+.fa-twitter-square {
+color: #d1d4d3;
+}
+.fa-google-plus-square {
+color: #d1d4d3;
+}
+.fa-tumblr-square{
+color: #d1d4d3;
+}
+.fa-github  {
+color: #d1d4d3;
+}
+.fa-pinterest-square {
+color: #d1d4d3;
+}
+.fa-linkedin-square{
+color: #d1d4d3;
+}
+/**/
+.fa-facebook-square:hover {
+color: #3B5998;
+}
+.fa-twitter-square:hover {
+color: #4099FF;
+}
+.fa-google-plus-square:hover {
+color: #d34836;
+}
+.fa-tumblr-square:hover {
+color: #35465c;
+}
+.fa-github:hover {
+color: #666;
+}
+.fa-pinterest-square:hover {
+color: #cc2127;
+}
+.fa-linkedin-square:hover {
+color: #0976b4;
+}
+/* SNSボタン*/
+
+/*pagetop*/
+#page-top{
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+

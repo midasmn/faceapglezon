@@ -1,0 +1,59 @@
+/*フッター用設定*/
+body {
+  margin: 0;
+  padding: 0;
+  background: url(img.jpg) center center fixed no-repeat;
+}
+video {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+/*パンくず*/
+.breadcrumb ,.bs-footer{
+  border: 1px solid #fff;
+  background: transparent;
+}
+#URL{
+  border: 1px solid #fff;
+  background: transparent;
+}
+#submit-btn{
+  display: inline-block;
+/*  width: 120px;
+  margin: 45px 40px 40px;
+  padding: 15px 10px;*/
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  transition: .3s;
+}
+#submit-btn:hover {
+  border: 1px solid rgba(0,0,0,.5);
+  color: rgba(0,0,0,.5);
+}
+
+
+/*ページtopスクロール*/
+#page-top{
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  bottom: 15px;
+  right: 20px;
+  width: 100px;
+  padding: 10px 5px;
+/*  background: rgba(0,0,0,.7);
+  color: #fff;*/
+  text-align: center;
+  text-decoration: none;
+}

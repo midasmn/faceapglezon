@@ -1,0 +1,7 @@
+Sitemap:http://faceapglezon.info/loto7/sitemap.xml
+
+User-Agent: *
+Disallow: /cronloto.php
+Disallow: /ctrl.php
+Disallow: /test.php
+Disallow: /lib/

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>getCurrentPosition()のサンプルデモ</title>
+		<!-- プログラムの実行 -->
+		<script>
+
+//成功した時の関数
+function successFunc(position){
+	//緯度をアラート表示
+	alert(position.coords.latitude);
+
+	//経度をアラート表示
+	alert(position.coords.longitude);
+}
+
+//失敗した時の関数
+function errorFunc(error){
+	//エラーコードのメッセージを定義
+	var errorMessage = {
+		0: "原因不明のエラーが発生しました…。",
+		1: "位置情報の取得が許可されませんでした…。",
+		2: "電波状況などで位置情報が取得できませんでした…。",
+		3: "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。",
+	};
+
+	//エラーコードに合わせたエラー内容を表示
+	alert(errorMessage[error.code]);
+}
+
+//オプション・オブジェクト
+var optionObj = {
+	"enableHighAccuracy": false,
+	"timeout": 8000,
+	"maximumAge": 5000,
+};
+
+//現在位置を取得する
+navigator.geolocation.getCurrentPosition(successFunc,errorFunc,optionObj);
+		</script>
+	</head>
+<body>
+<h1>getCurrentPosition()のサンプルデモ</h1>
+<p>お使いの端末の、位置情報を取得して、緯度と経度をアラート表示します。初回のアクセスの場合、位置情報の取得を許可して下さい。</p>
+<p style="text-align:right">(プログラムの配布元: <a href="http://syncer.jp/how-to-use-geolocation-api">Syncer</a>)</p>
+
+</body>
+</html>

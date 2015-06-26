@@ -1,0 +1,268 @@
+.clear{clear:both;}
+/*星用エリア*/
+#no_area{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#no_area ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#no_area li{
+  float: left;
+  width: 37px;
+  height: 37px;
+
+  margin: 0;
+  padding: 0;
+}
+/*星*/
+#star-five_red {
+   margin: 20px 0;
+   position: relative;
+   display: block;
+   color: black;
+   width: 0px;
+   height: 0px;
+   border-right:  22.5px solid transparent; /*サイズ*/
+   border-bottom: 15.3px  solid #E70012;      /*サイズ*/
+   border-left:   22.5px solid transparent; /*サイズ*/
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+
+}
+#star-five_red:before {
+   border-bottom: 18px solid #E70012;   /*サイズ*/
+   border-left: 6.3px solid transparent;  /*サイズ*/
+   border-right: 6.3px solid transparent; /*サイズ*/
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -11px;
+   left: -16px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+#star-five_red:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: 1px;
+   left: -26px;
+   width: 0px;
+   height: 0px;
+   border-right: 22.5px solid transparent;  /*サイズ*/
+   border-bottom: 15.3px solid #E70012;       /*サイズ*/
+   border-left: 22.5px solid transparent;   /*サイズ*/
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}
+/* 青 */
+#star-five_blue {
+   margin: 20px 0;
+   position: relative;
+   display: block;
+   color: black;
+   width: 0px;
+   height: 0px;
+   border-right:  22.5px solid transparent; /*サイズ*/
+   border-bottom: 15.3px  solid #1C1F8A;      /*サイズ*/
+   border-left:   22.5px solid transparent; /*サイズ*/
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+}
+#star-five_blue:before {
+   border-bottom: 18px solid #1C1F8A;   /*サイズ*/
+   border-left: 6.3px solid transparent;  /*サイズ*/
+   border-right: 6.3px solid transparent; /*サイズ*/
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -11px;
+   left: -16px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+#star-five_blue:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: 1px;
+   left: -26px;
+   width: 0px;
+   height: 0px;
+   border-right: 22.5px solid transparent;  /*サイズ*/
+   border-bottom: 15.3px solid #1C1F8A;       /*サイズ*/
+   border-left: 22.5px solid transparent;   /*サイズ*/
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}
+/* オレンジ */
+#star-five_orange {
+   margin: 20px 0;
+   position: relative;
+   display: block;
+   color: black;
+   width: 0px;
+   height: 0px;
+   border-right:  22.5px solid transparent; /*サイズ*/
+   border-bottom: 15.3px  solid #F39801;      /*サイズ*/
+   border-left:   22.5px solid transparent; /*サイズ*/
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+}
+#star-five_orange:before {
+   border-bottom: 18px solid #F39801;   /*サイズ*/
+   border-left: 6.3px solid transparent;  /*サイズ*/
+   border-right: 6.3px solid transparent; /*サイズ*/
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -11px;
+   left: -16px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+}
+#star-five_orange:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: 1px;
+   left: -26px;
+   width: 0px;
+   height: 0px;
+   border-right: 22.5px solid transparent;  /*サイズ*/
+   border-bottom: 15.3px solid #F39801;       /*サイズ*/
+   border-left: 22.5px solid transparent;   /*サイズ*/
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}
+/* ボーナス */
+#bonus-no{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#bonus-no ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#bonus-no li{
+  float: left;
+  width: 36px;
+  margin: 0;
+  padding: 0;
+}
+#bonus {
+   margin: 20px 0;
+   position: relative;
+    left: 3px;
+    top: 0px;
+    background-color: black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    box-shadow: 1px 1px 1px #ddc inset;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    /*font-family: 'Anton', sans-serif;*/
+    font-size: 16px;
+    text-align: center;
+}
+/*数字*/
+#no{
+   position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#no ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#no li{
+  float: left;
+  width: 37px;
+    height: 37px;
+  margin: 0;
+  padding: 0;
+}
+#no span {
+   margin: 18px 0;
+   position: relative;
+    left: 3px;
+    top: -8px;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    /*font-family: 'Anton', sans-serif;*/
+    font-size: 16px;
+    text-align: center;
+}
+/*パワー数字*/
+#trtitle{
+}
+#tdtitle{
+  align:center;
+  font-size: 11px;
+}
+#tdno{
+  align:right;
+  color:green;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+
+        background-color: red;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    line-height: 13px;
+    text-align: center;
+}
+#tdcnt{
+  align:right;
+  color:gray;
+  font-size: 13px;
+  text-align: center;
+}

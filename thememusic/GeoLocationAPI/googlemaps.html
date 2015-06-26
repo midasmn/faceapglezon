@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>現在位置をGoogle Mapsに反映するサンプルデモ</title>
+		<!-- スタイルシート-->
+		<style>
+img{
+	max-width:100%;
+	height:auto;
+}
+
+/* メインコンテンツの幅 */
+.main_contents{
+	width:640px;
+	max-width:100%;
+}
+	
+/* レスポンシブ対応 */
+/* [padding-bottom]には[height/width]の割合を指定 */
+.map_canvas_wrapper{
+	max-width:100%;
+	height:auto;
+	padding-bottom:75%;
+	overflow:hidden;
+	position:relative;
+	top: 0;
+	left: 0;
+}
+.map_canvas_wrapper #map_canvas{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+	
+/* キャンパス内の画像崩れの防止 */
+#map_canvas img{
+	max-width:none;
+}
+		</style>
+		<!-- Google Mapsライブラリの読み込み -->
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<!-- プログラムの実行 -->
+		<script>
+
+//成功した時の関数
+function successFunc(position){
+
+	/***********************************
+		Google Static Maps(画像地図)の書き出し
+	***********************************/
+	var latLng = position.coords.latitude+','+position.coords.longitude;
+	document.getElementById("google-static-maps").innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latLng+'&zoom=17&size=1200x600&scale=2&markers=color:blue%7Clabel:P%7C'+latLng+'&sensor=false" width="600" height="300" alt="現在位置の表示"/>';
+
+	/***********************************
+		Google Maps(埋め込み地図)の書き出し
+	***********************************/
+	//地図キャンパスのエレメントを取得し[変数:mapCanvas]に代入する。
+	var mapCanvas = document.getElementById('map_canvas');
+
+	//MapOptionsオブジェクトを作成し、[変数:mapOptions]に代入する。
+	var mapOptions = {
+		center: new google.maps.LatLng( position.coords.latitude, position.coords.longitude ),
+		zoom: 17,
+	};
+
+	//Mapクラスを使って地図のインスタンスを作成(地図描写)する
+	var map = new google.maps.Map( mapCanvas , mapOptions );
+
+	//MarkerOptionsオブジェクトを作成し、[変数:markerOptions]に代入する。
+	var markerOptions = {
+		position: new google.maps.LatLng( position.coords.latitude, position.coords.longitude ),
+		map: map,
+	};
+
+	//Markerクラスを使ってマーカーのインスタンスを作成(レンダリング)する
+	new google.maps.Marker( markerOptions );
+
+}
+
+//失敗した時の関数
+function errorFunc(error){
+	//エラーコードのメッセージを定義
+	var errorMessage = {
+		0: "原因不明のエラーが発生しました…。",
+		1: "位置情報の取得が許可されませんでした…。",
+		2: "電波状況などで位置情報が取得できませんでした…。",
+		3: "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。",
+	};
+
+	//エラーコードに合わせたエラー内容を表示
+	alert(errorMessage[error.code]);
+}
+
+//オプション・オブジェクト
+var optionObj = {
+	"enableHighAccuracy": false,
+	"timeout": 8000,
+	"maximumAge": 5000,
+};
+
+//現在位置を取得する
+navigator.geolocation.getCurrentPosition(successFunc,errorFunc,optionObj);
+		</script>
+	</head>
+<body>
+<h1>現在位置をGoogle Mapsに反映するサンプルデモ</h1>
+<p>現在位置を取得し、Google MapsとGoogle Static Maps、それぞれに反映するサンプルデモです。</p>
+<p style="text-align:right">(プログラムの配布元: <a href="http://syncer.jp/how-to-use-geolocation-api">Syncer</a>)</p>
+
+<div class="main_contents">
+
+	<h2>Google Static Maps (画像地図)</h2>
+	<p id="google-static-maps">少々、お待ち下さい…。</p>
+
+	<h2>Google Maps (埋め込み地図)</h2>
+	<div class="map_canvas_wrapper">
+		<div id="map_canvas">少々、お待ち下さい…。</div>
+	</div>
+
+</div>
+
+</body>
+</html>
